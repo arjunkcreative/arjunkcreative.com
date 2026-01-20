@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arjun K.</title>
+    <meta name="description" content="Arjun K. — Comedian & Writer based in New York City">
+    <link rel="canonical" href="https://arjunkcreative.com">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --yellow: #ffd521;
+            --pink: #ff6eb4;
+            --blue: #2d72b9;
+            --white: #ffffff;
+            --text-dark: #1a1a1a;
+            --text-light: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 18px;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: var(--blue);
+            color: var(--text-dark);
+            min-height: 100vh;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+
+        /* Top section - Yellow */
+        .hero {
+            background: var(--yellow);
+            padding: 3.5rem 2rem 2rem;
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .eyebrow {
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: var(--text-dark);
+            opacity: 0.7;
+            margin-top: 0.5rem;
+            margin-bottom: 0;
+            font-weight: 600;
+        }
+
+        .name {
+            font-size: clamp(3rem, 11vw, 5rem);
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            line-height: 1;
+            margin-bottom: 0.4rem;
+            color: var(--text-dark);
+        }
+
+        .title {
+            font-size: 1.1rem;
+            color: var(--pink);
+            font-weight: 700;
+        }
+
+        /* Squiggle divider */
+        .squiggle-divider {
+            position: relative;
+            height: 35px;
+            margin-top: -1px;
+            z-index: 10;
+        }
+
+        .squiggle-divider svg {
+            position: absolute;
+            width: 100%;
+            height: 35px;
+            left: 0;
+        }
+
+        /* Bottom section - Blue */
+        .content {
+            background: var(--blue);
+            padding: 1.25rem 2rem 1.5rem;
+        }
+
+        .content-inner {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .section {
+            margin-bottom: 1.25rem;
+        }
+
+        .section:last-child {
+            margin-bottom: 0;
+        }
+
+        .section-title {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: var(--pink);
+            margin-bottom: 0.4rem;
+            font-weight: 800;
+        }
+
+        .about-text {
+            color: var(--white);
+            font-size: 0.95rem;
+            line-height: 1.5;
+            max-width: 540px;
+        }
+
+        .item {
+            margin-bottom: 0.4rem;
+        }
+
+        .item:last-child {
+            margin-bottom: 0;
+        }
+
+        .item-main {
+            font-weight: 700;
+            font-size: 0.95rem;
+            color: var(--white);
+        }
+
+        .item-sub {
+            color: var(--white);
+            opacity: 0.7;
+            font-size: 0.85rem;
+        }
+
+        /* Social icons */
+        .socials {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: 0.75rem;
+        }
+
+        .socials a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background: rgba(0,0,0,0.1);
+            color: var(--text-dark);
+            transition: all 0.2s ease;
+        }
+
+        .socials a:hover {
+            background: var(--pink);
+            color: var(--white);
+            transform: scale(1.1);
+        }
+
+        .socials svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        /* Squiggle line decorations */
+        .squiggle-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+            overflow: hidden;
+        }
+
+        .squiggle {
+            position: absolute;
+            stroke-dasharray: 200;
+            stroke-dashoffset: 200;
+            animation: drawSquiggle 3s ease-in-out infinite alternate;
+        }
+
+        .squiggle-1 {
+            top: 12%;
+            left: 5%;
+            animation-delay: 0s;
+        }
+
+        .squiggle-2 {
+            bottom: 25%;
+            right: 6%;
+            animation-delay: -1s;
+        }
+
+        .squiggle-3 {
+            top: 55%;
+            left: 12%;
+            animation-delay: -2s;
+        }
+
+        @keyframes drawSquiggle {
+            0% {
+                stroke-dashoffset: 200;
+            }
+            100% {
+                stroke-dashoffset: 0;
+            }
+        }
+
+        /* Animations */
+        .section {
+            animation: fadeUp 0.7s ease forwards;
+            opacity: 0;
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .section:nth-of-type(1) { animation-delay: 0.1s; }
+        .section:nth-of-type(2) { animation-delay: 0.2s; }
+        .section:nth-of-type(3) { animation-delay: 0.3s; }
+
+        /* Responsive - Larger desktops */
+        @media (min-height: 800px) {
+            .hero { padding: 4rem 2rem 3rem; }
+            .content { padding: 2rem 2rem 2.5rem; }
+            .name { font-size: clamp(3rem, 10vw, 5rem); }
+            .section { margin-bottom: 1.75rem; }
+        }
+
+        /* Responsive - Tablets */
+        @media (max-width: 768px) {
+            .hero { padding: 3rem 1.5rem 2rem; }
+            .content { padding: 1.25rem 1.5rem 1.5rem; }
+        }
+
+        /* Responsive - Mobile */
+        @media (max-width: 600px) {
+            html { font-size: 16px; }
+            .hero { padding: 2.5rem 1.25rem 1.75rem; }
+            .content { padding: 1rem 1.25rem 1.25rem; }
+            .name { font-size: 2.5rem; }
+            .title { font-size: 0.95rem; }
+            .squiggle-divider { height: 25px; }
+            .squiggle-divider svg { height: 25px; }
+            .section { margin-bottom: 1rem; }
+            .squiggle-1 { display: none; }
+            .socials a { width: 42px; height: 42px; }
+            .socials svg { width: 20px; height: 20px; }
+        }
+
+        /* Responsive - Small mobile */
+        @media (max-width: 380px) {
+            html { font-size: 15px; }
+            .hero { padding: 2rem 1rem 1.5rem; }
+            .content { padding: 0.75rem 1rem 1rem; }
+            .name { font-size: 2.2rem; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Squiggle decorations -->
+    <div class="squiggle-container">
+        <svg class="squiggle squiggle-1" width="120" height="40" viewBox="0 0 120 40" fill="none">
+            <path d="M5 20 Q 20 5, 35 20 T 65 20 T 95 20 T 115 20" stroke="rgba(0,0,0,0.08)" stroke-width="3" fill="none" stroke-linecap="round"/>
+        </svg>
+        <svg class="squiggle squiggle-2" width="100" height="35" viewBox="0 0 100 35" fill="none">
+            <path d="M5 17 Q 20 5, 35 17 T 65 17 T 95 17" stroke="rgba(255,255,255,0.15)" stroke-width="3" fill="none" stroke-linecap="round"/>
+        </svg>
+        <svg class="squiggle squiggle-3" width="80" height="30" viewBox="0 0 80 30" fill="none">
+            <path d="M5 15 Q 15 5, 30 15 T 55 15 T 75 15" stroke="rgba(255,255,255,0.1)" stroke-width="2" fill="none" stroke-linecap="round"/>
+        </svg>
+    </div>
+
+    <!-- Hero section - Yellow -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="name">Arjun K.</h1>
+            <p class="title">Comedy Writer & Performer</p>
+            <p class="eyebrow">New York City</p>
+            <div class="socials">
+                <a href="mailto:arjun.k.creative@gmail.com" aria-label="Email">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="4" width="20" height="16" rx="2"/>
+                        <path d="M22 6l-10 7L2 6"/>
+                    </svg>
+                </a>
+                <a href="https://instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="2" width="20" height="20" rx="5"/>
+                        <circle cx="12" cy="12" r="4"/>
+                        <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Squiggle divider -->
+    <div class="squiggle-divider">
+        <svg viewBox="0 0 1440 35" preserveAspectRatio="none" fill="none">
+            <!-- Yellow fills down into the troughs -->
+            <path d="M0 0 
+                     H 1440 
+                     V 17
+                     Q 1380 0, 1320 17
+                     T 1200 17
+                     T 1080 17
+                     T 960 17
+                     T 840 17
+                     T 720 17
+                     T 600 17
+                     T 480 17
+                     T 360 17
+                     T 240 17
+                     T 120 17
+                     T 0 17
+                     Z" 
+                  fill="#ffd521"/>
+            <!-- Blue fills up into the peaks -->
+            <path d="M0 35 
+                     H 1440 
+                     V 17
+                     Q 1380 0, 1320 17
+                     T 1200 17
+                     T 1080 17
+                     T 960 17
+                     T 840 17
+                     T 720 17
+                     T 600 17
+                     T 480 17
+                     T 360 17
+                     T 240 17
+                     T 120 17
+                     T 0 17
+                     Z" 
+                  fill="#2d72b9"/>
+        </svg>
+    </div>
+
+    <!-- Content section - Blue -->
+    <section class="content">
+        <div class="content-inner">
+            <div class="section">
+                <h2 class="section-title">About</h2>
+                <p class="about-text">NYC-based comedy writer and performer.</p>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">Work</h2>
+                <!--
+		<div class="item">
+                    <p class="item-main">House Team Member</p>
+                    <p class="item-sub">Sketch group name — 2024–Present</p>
+                </div>
+		-->
+                <div class="item">
+                    <p class="item-main">Writer</p>
+                    <p class="item-sub">Chicago Style (TV Pilot) — 2025</p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">Training</h2>
+                <div class="item">
+                    <p class="item-main">UCB</p>
+                    <p class="item-sub">Improv, Sketch</p>
+                </div>
+            </div>

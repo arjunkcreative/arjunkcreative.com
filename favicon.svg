@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
+  <!-- Pink border -->
+  <rect width="16" height="16" rx="3" fill="#ff6eb4"/>
+  <defs>
+    <clipPath id="inner">
+      <rect x="1" y="1" width="14" height="14" rx="2"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#inner)">
+    <!-- Mostly yellow background -->
+    <rect x="1" y="1" width="14" height="14" fill="#ffd521"/>
+    <!-- Blue bottom portion with squiggle top edge -->
+    <path d="M1 11.5 Q 4 10, 5.5 11.5 T 10.5 11.5 T 15 11.5 V 15 H 1 Z" fill="#2d72b9"/>
+  </g>
+  <!-- AK text elegantly placed on yellow area -->
+  <text x="8" y="9.4" font-family="'DM Sans', sans-serif" font-weight="800" font-size="8.2" fill="#1a1a1a" text-anchor="middle" letter-spacing="0.3">AK</text>
+</svg>

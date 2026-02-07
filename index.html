@@ -150,6 +150,23 @@
             font-size: 0.95rem;
         }
 
+        .item-sub.bullet {
+            padding-left: 1rem;
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        .item-sub.bullet::before {
+            content: '·';
+            position: absolute;
+            left: 0;
+            font-weight: 800;
+            font-size: 1.4rem;
+            color: var(--pink);
+            opacity: 1;
+        }
+
         /* Social icons */
         .socials {
             display: flex;
@@ -271,7 +288,6 @@
             .squiggle-divider { height: 25px; }
             .squiggle-divider svg { height: 25px; }
             .section { margin-bottom: 1rem; }
-            .item-sub { font-size: 0.85rem; }
             .squiggle-1 { display: none; }
             .squiggle-3 { top: auto; bottom: 3%; left: auto; right: 5%; }
             .socials a { width: 42px; height: 42px; }
@@ -385,8 +401,8 @@
 		-->
                 <div class="item">
                     <p class="item-main">Writer</p>
-                    <p class="item-sub">"Mom's World" (UCB Maude House Sketch Team) - 2026</p>
-                    <p class="item-sub">"Chicago Style" (Original TV Pilot) - 2025</p>
+                    <p class="item-sub bullet">"Mom's World" (UCB Maude House Sketch Team) - 2026</p>
+                    <p class="item-sub bullet">"Chicago Style" (Original TV Pilot) - 2025</p>
                 </div>
             </div>
 
